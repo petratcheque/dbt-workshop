@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: google_analytics
+    database: datawarehouse
+    schema: dbt_seeds
+    tables:
+      - name: ga_traffic
+        columns:
+          - name: date
+            tests:
+              - unique
+      
+      - name: loyalty_customers
